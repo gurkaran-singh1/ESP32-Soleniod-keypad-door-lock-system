@@ -21,8 +21,9 @@ This project is an ESP32-based electronic door lock system that provides secure 
 - **16x2 I2C LCD Display** for real-time feedback
 - **Relay Module** to control the solenoid lock
 - **Solenoid Lock** for locking/unlocking mechanism
-- **Blynk IoT Platform** for remote monitoring and alerts
-- **Power Supply and Jumper Wires** for connections
+- **Half Breadboard** for connection purposes
+- **2 9V Batteries** for powering soleniod lock
+- **Power Supply Cable (Micro USB) and Jumper Wires** for connections
 
 ---
 
@@ -32,6 +33,10 @@ This project is an ESP32-based electronic door lock system that provides secure 
 A solenoid lock is a device that uses electromagnetic energy to control the locking mechanism. When the relay connected to the solenoid lock is energized, it unlocks by allowing current to flow to the solenoid. In this project, the ESP32 triggers the relay based on password input, unlocking the solenoid for a set period.
 
 The relay module acts as a switch between the ESP32 and the solenoid lock. It receives signals from the ESP32 to control the high-power circuit, enabling safe operation of the solenoid lock without exposing the ESP32 to high current loads.
+
+Solenoid Lock includes two wires:
+- Positive (+) wire (red): needs to be connected to power supply
+- Negative (-) wire (black): needs to be connected to GND of DC power supply
 
 ---
 
