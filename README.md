@@ -3,6 +3,8 @@
 ## Introduction
 This project is an ESP32-based electronic door lock system that provides secure access control using a keypad, LCD display, relay module, and solenoid lock. The system integrates with the Blynk IoT platform, allowing for remote monitoring of lock status and alert notifications on unauthorized attempts. This system is ideal for home automation, office security, and other IoT applications.
 
+[![Video Demonstration](https://github.com/gurkaran-singh1/ESP32-Soleniod-keypad-door-lock-system/blob/main/images/ESP32Proj.JPG)](https://seneca-my.sharepoint.com/:v:/g/personal/gurkaran-singh1_myseneca_ca/EdOMYshiMhtDp-pF4wCRwZAB-zZ4hN-iVrxcuteNEMH0LQ?e=qgxDds&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
 ## Table of Contents
 1. [Hardware Used](#hardware-used)
 2. [Working Principle](#working-principle)
