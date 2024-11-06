@@ -1,17 +1,18 @@
 /*************************************************************
 
-  This is a simple demo of sending and receiving some data.
+  This is a simple demo of sending and receiving some data with Blynk IOT app
   Be sure to check out other examples!
  *************************************************************/
 
 /* Fill-in information from Blynk Device Info here */
-#define BLYNK_TEMPLATE_ID "TMPL2S83RAFu8"
+#define BLYNK_TEMPLATE_ID "TMPLXXXX" // You will find this information while setting up Blynk IoT app
 #define BLYNK_TEMPLATE_NAME "ESP32 Security Lock"
-#define BLYNK_AUTH_TOKEN "xxg3-sJ5IvBmQyk8ZcLgmjn9pX47Z5yC"
+#define BLYNK_AUTH_TOKEN "xxx-xxxxx-xxxxx-xxxx"
 
 /* Comment this out to disable prints and save space */
 #define BLYNK_PRINT Serial
 
+// The libraries you will need for this project
 #include <LiquidCrystal_I2C.h>
 #include <Keypad.h>
 #include <WiFi.h>
@@ -23,14 +24,14 @@
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "Karan";
-char pass[] = "singhkaran";
+char ssid[] = "Gurkaran";
+char pass[] = "xxxxxxx"; // WiFi Password
 char auth[] = BLYNK_AUTH_TOKEN;
 
 // +international_country_code + phone number
 // Portugal +351, example: +351912345678
-String phoneNumber = "+12898892396";
-String apiKey = "8734667";
+String phoneNumber = "+1XXX-XXX-XXXX";
+String apiKey = "87XXXX"; // You will get this key while setting up the WhatsApp API Bot
 
 #define RELAY_PIN   19 // ESP32 pin GPIO19 connected to the relay
 #define ROW_NUM     4  // keypad four rows
@@ -64,7 +65,7 @@ void setup() {
   lcd.setCursor(2,0);
   lcd.print(" WELCOME! ");
   lcd.setCursor(0, 1);
-  lcd.print("CSN505 Project");
+  lcd.print("ESP32 Project");
   delay(3000);
   lcd.clear();
   lcd.print("Enter Password");
@@ -79,7 +80,7 @@ void setup() {
   Serial.println("");
   Serial.print("Connected to WiFi network with IP Address: ");
   Serial.println(WiFi.localIP());
-  Blynk.begin(auth, ssid, pass, "blynk.cloud",80);
+  Blynk.begin(auth, ssid, pass, "blynk.cloud",80);  // This is connect the ESP32 to Blynk IoT app
  
 }
 
@@ -91,7 +92,7 @@ void loop() {
     if (input_password.length() < 4) {
       input_password += key;
       lcd.setCursor(input_password.length() - 1, 1);
-      lcd.print('*'); // Display '*' instead of the actual key pressed
+      lcd.print('*');  // Display '*' instead of the actual key pressed
     }
 
     if (input_password.length() == 4) {
@@ -128,7 +129,7 @@ void loop() {
         if (incorrect_attempts > max_attempts) {
           lcd.clear();
           lcd.print("INTRUDER!!");
-          Blynk.logEvent("intrusion_alert", "Intrusion Detected!");
+          Blynk.logEvent("intrusion_alert", "Intrusion Detected!"); // This event will be logged in Blynk dashboard.
 //          sendMessage("ATTENTION!! SOMEONE IS TRYING TO GET IN!!");
         }
       }
