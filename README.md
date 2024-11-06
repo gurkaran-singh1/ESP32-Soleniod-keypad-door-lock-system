@@ -46,7 +46,8 @@ You can download the .ino file in the Code folder as well
 
 <details>
    <summary>📚 Click to reveal the code!</summary>
-```
+
+```cpp
 /*************************************************************
 
 This is a simple demo of sending and receiving some data with Blynk IOT app
@@ -210,7 +211,6 @@ void sendMessage(String message){
   // Free resources
   http.end();
 }
-
 ```
 
 </details>
